@@ -10,7 +10,7 @@ import { Sheet, SheetContent, SheetTrigger } from "./sheet";
 
 const navLinks = [                                               //links de navegações.
 { name: "Home", href: "/" },         
-{ name: "Roadmap", href: "/" },
+{ name: "Roadmap", href: "/roadmap" },
 ]
 
 //------------------------------------------------------------------

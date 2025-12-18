@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "../components/ui/Navbar";
+import { CustomCursor } from "@/components/CustomCursor";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="pt-br" className={` ${poppins.className}  antialiased`}>
       <body className="font-sans antialiased">
         <div className="min-h-screen  bg-purple"> 
+          <CustomCursor />
           <Navbar />
           <main>
             {children}
