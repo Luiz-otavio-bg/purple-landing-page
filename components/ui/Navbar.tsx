@@ -66,7 +66,7 @@ export function Navbar(){
         fixed top-8 left-1/2 transform -translate-x-1/2 z-40
         transition-all duration-300 rounded-full h-14
         px-6 flex items-center justify-center space-x-4
-        max-w-xs md:max-w-lg lg:max-w-xl 
+        max-w-lg md:max-w-lg lg:max-w-xl 
         
         ${isDarkOnLight
             ? 'bg-white/90 shadow-xl border-t border-b border-gray-200'
