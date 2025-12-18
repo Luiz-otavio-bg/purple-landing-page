@@ -63,10 +63,10 @@ export function Navbar(){
     const isDarkOnLight = navbarTheme === 'dark-on-light';
 
     const navbarClasses = `
-        fixed top-8 left-1/2 transform -translate-x-1/2 z-50
+        fixed top-8 left-1/2 transform -translate-x-1/2 z-40
         transition-all duration-300 rounded-full h-14
         px-6 flex items-center justify-center space-x-4
-        max-w-xs md:max-w-lg lg:max-w-xl
+        max-w-xs md:max-w-lg lg:max-w-xl 
         
         ${isDarkOnLight
             ? 'bg-white/90 shadow-xl border-t border-b border-gray-200'
@@ -91,16 +91,18 @@ export function Navbar(){
                             className="text-sm font-medium hover:text-purple/50 transition-colors">{link.name}</Link>))}
                 </div>
                 <div className="flex items-center space-x-2  pl-2 pr-2">
-                    <Sheet>
+                    <Sheet modal={false}>
                         <SheetTrigger asChild>
                             <Button variant="ghost"
+                            
                                     size="icon"
                                     className="rounded-full h-10 w-10 hover:bg-white/20">
                                         <Menu className="h-5 w-5"/>
                                         <span className="sr-only">Toggle Menu</span>
+                                    
                                     </Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="w-full max-w-xl sm:max-w-md bg-background/50 backdrop-blur-xl p-0">
+                        <SheetContent side="right" className="w-full max-w-xl sm:max-w-md bg-background/50 backdrop-blur-xl p-0 z-50">
                             <div className="flex justify-between items-center px-8 py-4 border-b border-white/10">
                                 <div className="flex items-center space-x-2">
                                     <div className="w-8 h-8 rounded-full font-extrabold text-xl text-purple">P.</div> 
