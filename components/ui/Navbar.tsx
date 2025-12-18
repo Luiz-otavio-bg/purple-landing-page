@@ -28,6 +28,7 @@ const sectionThemes = [
 
 export function Navbar(){
     const [navbarTheme, setNavbarTheme] = useState('light-on-dark');
+    
 
     const handleScroll = useCallback(() => {
         const scrollY = window.scrollY;
@@ -73,9 +74,19 @@ export function Navbar(){
             : 'bg-white/10 backdrop-blur-md border border-white/20'
         }
     `;
+    const sheetClasses = `w-full max-w-xl sm:max-w-md backdrop-blur-xl p-0 z-50 transition-colors duration-300
+        
+        ${isDarkOnLight
+            ? 'bg-white/90 shadow-xl border-t border-b border-gray-200'
+            : 'bg-white/10 backdrop-blur-md border border-white/20'
+        }`;
+    
     
     const textColor = isDarkOnLight ? 'text-purple' : 'text-white'; 
+    const textColor2 = isDarkOnLight ? 'text-black/30' : 'text-purple'; 
     const logoColor = isDarkOnLight ? 'text-purple' : 'text-white';
+    const borderColor = isDarkOnLight ? 'border-purple/10' : 'border-white/10';
+    const divineColor = isDarkOnLight ? 'divine-purple/40' : 'divine-white/10';
     return(
         <header className={navbarClasses}>
             <div className={`text-xl font-extrabold ${logoColor}`}>
@@ -102,27 +113,27 @@ export function Navbar(){
                                     
                                     </Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="w-full max-w-xl sm:max-w-md bg-background/50 backdrop-blur-xl p-0 z-50">
-                            <div className="flex justify-between items-center px-8 py-4 border-b border-white/10">
+                        <SheetContent side="right" className={sheetClasses}>
+                            <div className={`flex justify-between items-center px-8 py-4 border-b ${borderColor} ${textColor}`}>
                                 <div className="flex items-center space-x-2">
-                                    <div className="w-8 h-8 rounded-full font-extrabold text-xl text-purple">P.</div> 
-                                    <Link href="/" className="text-white text-sm ml-12">Home</Link> 
-                                    <span className="text-white/50 text-sm">| RoadMap |</span>
+                                    <div className={`w-8 h-8 rounded-full font-extrabold text-xl ${textColor}`}>P.</div> 
+                                    <Link href="/" className={`text-sm ml-12 ${textColor}`}>Home</Link> 
+                                    <span className={`${textColor} text-sm`}>| RoadMap |</span>
                                 </div>    
                             </div>
-                            <div className="flex flex-col pt-4 divide-y divide-white/10">
+                            <div className={`flex flex-col pt-4 divide-y ${divineColor}`}>
                                 {navLinks.map((link, index) => (
                                     <div key={link.name} className="flex items-center justify-between group">
-                                        <span className="text-white/50 text-sm w-12 text-center p-6">
+                                        <span className={`${textColor} text-sm w-12 text-center p-6`}>
                                             {String(index + 1).padStart(2,'0')}
                                         </span>
                                     
                                     <Link
                                     href={link.href}
-                                    className="flex-1 text-2xl md:text-3xl font-semibold text-white p-6 transition-colors hover:text-purple">
+                                    className={`flex-1 text-2xl md:text-3xl font-semibold ${textColor} p-6 transition-colors hover:${textColor2}`}>
                                         {link.name === 'RoadMap' ? 'Grow Responsibly and Sustainably' : link.name}
                                         </Link>
-                                    <span className="flex items-center space-x-4 p-6 text-white/50">
+                                    <span className={`flex items-center space-x-4 p-6  ${textColor}`}>
                                         <span className="text-xs">0{index + 3}</span>
                                         <Menu className="h-5 w-5 rotate-90"/>
                                     </span>
