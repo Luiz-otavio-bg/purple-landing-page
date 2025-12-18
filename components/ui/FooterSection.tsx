@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button } from "./button";
-import { MoveRight } from "lucide-react";
 
 export function FooterSection(){
     return (

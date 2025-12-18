@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "./card";
-import { Zap, Sparkles, Shield, TrendingUp, Cpu, Users, Icon } from "lucide-react";
+import { Zap, Sparkles, Shield, TrendingUp, Cpu, Users, } from "lucide-react";
 
 
 const features = [{

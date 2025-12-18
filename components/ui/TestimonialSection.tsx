@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Card, CardContent } from "./card";
-import { Carousel, CarouselContent, CarouselItem, useCarousel, CarouselApi } from "./carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "./carousel";
 import { Avatar, AvatarFallback, AvatarImage} from "@radix-ui/react-avatar"; 
 import { Quote } from "lucide-react";
 
