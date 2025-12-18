@@ -62,7 +62,7 @@ function TestimonialCarousel(){
                                                 <Quote className="h-8 w-8 text-purple opacity-60" />
                                                 
                                                 
-                                                <p className="text-lg italic font-medium text-foreground">"{testimonial.quote}"</p>
+                                                <p className="text-lg italic font-medium text-foreground">&quot;{testimonial.quote}&quot;</p>
                                                 
                                                 <div className="flex items-center space-x-3 pt-4 border-t border-border/50 w-full">
                                                     <Avatar className="h-22 w-22">
