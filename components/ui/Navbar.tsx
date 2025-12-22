@@ -90,7 +90,7 @@ export function Navbar(){
     return(
         <header className={navbarClasses}>
             <div className={`text-xl font-extrabold ${logoColor}`}>
-                Purple.
+                Purple
             </div>
             <nav className={`flex items-center space-x-4 ${textColor}`}>
                 <div className="w-auto h-12 rounded-full bg-transparent flex items-center justify-center pl-2 pr-4">

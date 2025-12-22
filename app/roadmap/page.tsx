@@ -59,7 +59,7 @@ const Estrelas = () => {
 const roadmapSteps = [
     {id: 1, title: "Core Engine & UI", status: "completed", position: "top", description: "Finalização da interface com darkmode e UX otimizada."},
     {id: 2, title: "Smart Checkout PIX", status: "completed", position: "bottom", description: "Gateway de pagamento automatizado via PIX integraçado."},
-    {id: 3, title: "Lançamento beta ", status: "up coming", position: "top", description: "Abertura da plataforma para farmácias fundadoras."},
+    {id: 3, title: "Lançamento beta ", status: "current", position: "top", description: "Abertura da plataforma para farmácias fundadoras."},
     {id: 4, title: "Gestão de inventário", status: "up coming", position: "bottom", description: "Alertas de estoque crítico e controle de validades."},
     {id: 5, title: "Integração SNGPC", status: "up coming", position: "top", description: "Trasmissão de arquivos para controle de medicamentos (Anvisa)."},
     {id: 6, title: "App de delivery", status: "up coming", position: "bottom", description: "Canal de vendas direto para o cliente final."},
@@ -79,7 +79,7 @@ export default function Roadmap (){
             <Estrelas/>
             <div className='container mx-auto px-4'>
                 <div className='text-center mb-32'>
-                    <h2 className='text-5xl md:text-7xl font-bold tracking-tight'> O Caminho para a  <span className='text-purple3'> Purple </span></h2>
+                    <h2 className='text-5xl md:text-7xl font-bold tracking-tight'> O caminho para a  <span className='text-purple3'> Purple</span></h2>
                 </div>
 
                 <div className='hidden md:flex relative max-w-6xl mx-auto h-[400px] items-center'>
@@ -117,10 +117,10 @@ export default function Roadmap (){
                                         className={`w-7 h-7 rounded-full border-2 flex items-center justify-center bg-white transition-all duration-300
                                         ${step.status === 'completed' || step.status === 'upcoming' 
                                         ? 'border-white shadow-[0_0_15px_rgba(255,255,255,0.8)]' 
-                                        : 'bg-white/0'}`}>
+                                        : 'bg-white/20'}`}>
                                         
 
-                                        {step.status === 'up coming' && (<div className='w-2.5 h-2.5 bg-white/0 rounded-full animate-pulse'/>)}
+                                        {step.status === 'up coming' && (<div className='w-6 h-6 bg-purple rounded-full '/>)}
                                         
 
 
@@ -146,10 +146,12 @@ export default function Roadmap (){
                                 </AnimatePresence>
                                 </div>
                                 <div className={`absolute whitespace-nowrap text-center ${step.position === 'top' ? 'bottom-28' : 'top-28'}`}>
-                                        <h3 className={`text-xs md:text-sm font-black tracking-widest uppercase 
-                                            ${step.status === 'up coming' ? 'text-white/40' : 'text-white'}`}>
+                                        <h3 className={`text-xs md:text-sm font-black tracking-widest uppercase
+                                            ${step.status === 'up coming' ? 'text-white/40' : 'text-white'}
+                                            ${step.status === 'current' ? 'text-white/80 animate-pulse' : 'text-white'}`}>
                                             {step.title}
                                         </h3>
+                                        
                                 </div>
                             </div>
                             

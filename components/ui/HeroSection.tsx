@@ -31,12 +31,10 @@ export function HeroSection(){
                 <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
                 Purple é a resposta moderna que simplifica processos complexos, permitindo que você e sua equipe foquem no que realmente importa: <strong>O Crescimento.</strong></p>
                 <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-x-4">
-                    <Button size="lg" className="h-14 px-8 text-lg font-bold bg-purple2 hover:bg-purple3 transition-all shadow-lg">
-                        <Link href="#singup"> Comece Agora!</Link>
+                    <Button size="lg" className="h-14 px-8 text-lg font-bold text-purple bg-white hover:text-white hover:bg-purple3 transition-all shadow-lg">
+                        <Link href="#singup"> Comece agora!</Link>
                     </Button>
-                    <Button variant="outline" size="lg" className="h-14 px-8 text-lg font-bold border-white/40 text-white bg-white/10 hover:bg-white/20 transition-all backdrop-blur-sm">
-                        <Link href="#demo">Ver Demonstração</Link>
-                    </Button>
+                    
                 </div>
                 <p className="text-sm text-white/60 mt-4"></p>
             </div>

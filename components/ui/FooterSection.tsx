@@ -8,9 +8,9 @@ export function FooterSection(){
                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Pronto para dar o Próximo Passo?</h2>
                 <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">Junte-se a centenas de líderes que já revolucionaram sua gestão com o poder da <strong>Purple.</strong></p>
                 <div className="flex justify-center space-x-4">
-                    <Button asChild className="bg-white text-purple hover:bg-purple2 font-bold px-8 py-6 text-lg rounded-lg shadown-xl transition-all duration-300">
+                    <Button asChild className="bg-white text-purple hover:bg-purple2 hover:text-white font-bold px-8 py-6 text-lg rounded-lg shadown-xl transition-all duration-300">
                         <Link href="#">
-                            Comece Agora! 
+                            Comece agora! 
                         </Link>
                     </Button>
                     
